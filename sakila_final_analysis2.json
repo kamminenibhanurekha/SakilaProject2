@@ -1,0 +1,1017 @@
+{
+    "project overview": "The Java class `MavenWrapperDownloader` is designed to download a Maven wrapper.  It uses Java's networking and I/O capabilities to fetch and handle the download process. The code appears to manage downloading and potentially extracting the wrapper, though the implementation details are not fully provided in this snippet. This Java code snippet is a simple downloader for the Maven wrapper. It takes a base directory as a command-line argument, checks for a custom download URL in `maven-wrapper.properties`, and defaults to a predefined URL if not found.  The code appears incomplete. This Java code snippet attempts to load a URL from a Maven wrapper properties file. It reads the properties file, retrieves a specific property (PROPERTY_NAME_WRAPPER_URL), and handles potential IOExceptions during file operations.  Error handling is included, but some error details are suppressed. This Java code snippet downloads a file (Maven wrapper JAR) from a given URL to a specified local directory.  It handles directory creation and reports download progress and errors to the console.  Error handling is basic, catching a general Throwable. This Java code snippet defines a function to download a file from a URL, optionally using environment variables for authentication.  It handles potential exceptions during the download process and uses Java's NIO channels for efficient data transfer. The code is incomplete as the `Channels.newChannel(website.open...` is cut off. This Java code consists of a Spring Boot application (SakilaProjectApplication) and a custom failure handler (FailureHandler).  The provided snippets show the application's main method and a partial implementation of a custom access denied handler, lacking crucial details for complete analysis.  There is also a  function to copy a file using channels which is not integrated with the rest of the application based on the provided code. This Java code defines a Spring component `FailureHandler` that implements Spring Security's `AccessDeniedHandler`.  It handles access denied exceptions by redirecting the user to an error page. The provided snippet is incomplete, lacking the full context of the `WebSecurityConfig` class. This Java code is a Spring Security configuration class that sets up authentication and authorization for a web application.  It uses an in-memory user detail service and BCrypt for password encoding, defining roles and access control for different URLs. This Java code snippet configures Spring Security for an application, defining access control rules for different URL paths. It uses services for customer and staff authentication and a custom success handler.  The configuration specifies roles ('USER' and 'ADMIN') with corresponding access permissions to specific URL patterns. This Java code snippet configures Spring Security for an application. It defines security rules for different URL paths, allowing anonymous access to specific paths, requiring authentication for others, and specifying custom login and logout handling, including a custom success handler and error page. This Java code snippet configures Spring Security authentication. It defines a password encoder using BCrypt and sets up a DaoAuthenticationProvider to authenticate users based on a UserDetailsService, integrating with Spring's AuthenticationManagerBuilder. This Java code implements a Spring Security UserDetailsService to authenticate users. It retrieves user details from both Customer and Staff repositories, using BCryptPasswordEncoder for password hashing.  The service is designed to work with a system that has separate customer and staff user types. This Java code snippet implements a `loadUserByUsername` function for Spring Security, loading user details from either a `Customer` or `Staff` repository based on the provided username. It uses BCryptPasswordEncoder for password encoding and assigns roles ('ADMIN' or 'USER') based on the user type. This Java code defines a Spring MVC configuration class named `MvcConfig`. It configures view controllers to map specific URLs to view names, essentially handling routing for the application's home and login pages.  It uses Spring's `WebMvcConfigurer` interface. This Java code defines a Spring Security AuthenticationSuccessHandler that customizes the redirect behavior after successful user authentication.  It uses a default redirect strategy and likely redirects to a specific URL based on user roles or other authentication details (though the full implementation is not provided). This Java code snippet is a Spring Security authentication success handler.  It checks the user's roles (USER or ADMIN) after successful authentication and redirects them to different URLs accordingly. Error handling is rudimentary. This Java code snippet shows a Spring controller class (`CategoryController`) likely handling requests related to categories. It uses services to interact with data and appears to manage category-related views, potentially rendering them based on request parameters. This Java code defines a `CategoryController` class, likely part of a Spring MVC web application.  It handles HTTP requests related to film categories, fetching and displaying category data using services to interact with underlying data storage. This Java code defines two Spring controllers: CategoryController and ActorController.  CategoryController handles requests related to film categories, retrieving details and associated films. ActorController (partially shown) likely manages requests related to actors. This Java code defines a Spring controller `ActorController` responsible for handling actor-related requests. It uses services (`FilmService`, `ActorService`) to retrieve and manage actor data, offering a GET endpoint to fetch actors optionally filtered by first and last name. This Java code snippet handles two HTTP GET requests related to actors.  The first retrieves a list of actors based on filtering criteria (first name, last name, or both). The second retrieves details for a specific actor given their ID. This Java code snippet shows a controller class, likely part of a Spring MVC application,  handling requests related to actors and staff.  It retrieves actor data using services and prepares the data for view rendering. This Java code defines a Spring MVC controller (`StaffController`) that handles requests related to staff management. It uses dependency injection to access services for staff, customer, and inventory data, and includes a method to handle requests to the \"/owner\" endpoint. This Java code snippet appears to be a controller method handling requests for an owner's dashboard.  It retrieves data about the currently logged-in staff member, the total number of customers and inventory items, and adds this information to a model for display on an owner-specific view. This Java code snippet appears to be a Spring-based controller for a movie rental application. It uses services for customers, films, inventory, and rentals, and likely handles web requests related to these entities.  The code manages transactions and interacts with a database (indicated by the use of JPA). This Java code defines a Spring MVC controller (`FilmController`) responsible for handling film-related requests. It uses dependency injection to interact with various services (FilmService, InventoryService, RentalService, CustomerService) for managing films, inventory, rentals, and customers. This Java code snippet defines two controller functions for a film management application.  The first retrieves a list of films based on a filter, while the second retrieves details for a specific film using its ID. Both functions use Spring's ModelMap to pass data to the view. This Java code snippet represents a partial class definition, likely for a `Staff` entity. It includes getter and setter methods for a `lastUpdate` timestamp, and an `equals` method for object comparison.  The `equals` method compares several fields for equality. The code defines two Java classes: Staff and Customer.  Both appear to be JPA entities, representing staff and customer data respectively, with fields for identification, contact information, and status. The Staff class includes an equals and hashCode method for object comparison. This Java code snippet represents a Customer entity class, likely part of a larger application. It uses annotations (@Id, @Basic, @Column) suggesting persistence with a framework like JPA or Hibernate, managing customer data including ID, name, and email. This Java code snippet represents a simple Java Bean or entity class, likely part of a larger application's data model. It includes fields for email, active status, creation date, and last update date, along with standard getter and setter methods for each field and an equals method. The Java code defines a Customer class, likely part of a larger application.  It implements equals and hashCode methods for proper object comparison based on several attributes. The class uses JPA annotations for persistence. This Java code defines an `Actor` entity class, likely for a database persistence layer.  It includes attributes for actor ID, first name, last name, and last update timestamp, along with standard getter and setter methods for each attribute. The annotations suggest use with a JPA or similar ORM framework. The code defines a Java class named `Actor` that encapsulates actor information, including an ID, first name, last name, and last update timestamp.  It provides getter and setter methods for the last update timestamp and overrides the `equals` and `hashCode` methods for proper object comparison. This Java code defines an `Order` class representing an order with customer, film, and rental details.  It uses standard getter and setter methods for each attribute, and a constructor to initialize the object. The code snippet is incomplete, as it shows only the `Order` class and part of a `Rental` class. This Java code defines a `Rental` entity class, likely for a database mapping using JPA annotations.  It includes fields representing rental information such as dates, IDs for inventory, customer, and staff. Getter and setter methods are provided for each attribute. This Java code snippet represents a partial class definition, likely a JavaBean or entity class for a database table related to rentals or returns.  It includes getter and setter methods for various fields such as inventory ID, customer ID, return date, staff ID, and last update timestamp.  The annotations suggest the class is likely mapped to a database table. This Java code defines a `Rental` class, likely representing a rental record in a database.  It includes attributes for rental details, such as IDs, dates, and timestamps, and overrides `equals` and `hashCode` for proper object comparison. The Java code defines a `FilmCategory` entity class for a database using JPA annotations.  It represents the many-to-many relationship between films and categories using a composite key. The class includes getter and setter methods for the `filmId`, `categoryId`, and `lastUpdate` attributes. The Java code defines a `FilmCategory` class, likely part of a database entity model.  It represents a many-to-many relationship between films and categories, storing film ID, category ID, and a timestamp for the last update. The class includes standard getters, setters, `equals()`, and `hashCode()` methods. This Java code defines an Inventory entity class for a database.  It uses JPA annotations to map class fields to database columns, representing inventory items with an inventory ID, film ID, and last update timestamp. The Java code defines a primary key class `FilmCategoryPK` for a database table representing a many-to-many relationship between films and categories, and an `Inventory` class (partially shown) that overrides equals and hashCode methods for proper object comparison. The provided Java code defines a class `FilmCategoryPK` which appears to be a composite primary key class likely used in a database context for a many-to-many relationship between films and categories. It includes getter and setter methods for `filmId` and `categoryId`, and overrides `equals` and `hashCode` for proper key comparison. This Java code snippet is part of a Spring Boot application, likely related to a movie rental system.  It shows a `StaffService` class responsible for managing `Staff` entities, including retrieving all staff members. The shown method is incomplete but appears to handle rental data. The code consists of two Java services: StaffService and InventoryService.  StaffService retrieves staff data by username or all staff. InventoryService interacts with an InventoryRepository to manage inventory data, likely providing methods for retrieval and potentially manipulation (though the provided snippet is incomplete). This Java code defines an `ActorService` class that interacts with a database repository (`ActorRepository`) to manage actor data.  It provides methods for retrieving all actors, getting an actor by ID, deleting an actor by ID, and retrieving the total actor count. This Java code defines an ActorService class that provides various methods to retrieve actor data from an underlying ActorRepository.  It acts as a service layer, abstracting data access logic for actors based on different criteria (ID, full name, first name, last name). The Java code snippet shows a `FilmService` class interacting with a film repository.  It provides a method to retrieve all films and another to get a film by its ID. The code also includes a function to construct an actor's full name from their ID, which suggests potential coupling or a design decision to retrieve actor data within this service. This Java code defines a service layer for managing films, interacting with a `filmRepository` to perform CRUD operations and retrieve films based on various criteria (ID, title, category, actor, availability).  It acts as an intermediary between a potential controller and the data access layer. The Java code defines a `CategoryService` class that interacts with a database repository to manage `Category` entities.  It provides functionalities to retrieve all categories and get a specific category by its ID. The code uses Spring's `@Service` annotation indicating it's a service component. This code defines two Spring Data JPA repositories: CategoryRepository and ActorRepository.  These repositories provide data access methods for the Category and Actor entities respectively, leveraging Spring Data JPA's functionality for simplified database interactions. The code defines two Spring Data JPA repositories: `ActorRepository` and `RentalRepository`.  `ActorRepository` provides methods to retrieve actors from a database based on different criteria (first name, last name, or ID). `RentalRepository` offers methods to retrieve rentals by ID and using a custom query joining with the customer table. The Java code defines a Spring Data JPA repository interface `CustomerRepository` for managing `Customer` entities.  It provides methods to retrieve customers by credentials (email and ID) and by email, using native SQL queries for database interaction. This Java code snippet defines a repository interface for interacting with a 'customer' database table. It provides methods to retrieve customer data by various criteria including username, first name, last name, full name, customer ID, and email.  The queries are implemented using Spring Data JPA's `@Query` annotation for native SQL queries. This Java code defines a Spring Data JPA repository interface named `FilmRepository` for interacting with a `Film` entity.  It extends `JpaRepository` and provides a custom query to retrieve the available count of films based on film ID. The repository uses native queries for database interaction. This Java code snippet represents a Spring Data JPA repository for interacting with a film database. It provides methods to retrieve films based on various criteria, including availability, category, actor, title, and film ID. This Java code defines a Spring Data JPA repository interface named `InventoryRepository` for managing `Inventory` entities. It extends `JpaRepository` and provides custom methods to retrieve inventory information based on inventory ID and potentially update inventory information (the last method is incomplete in the provided code). This Java code defines a Spring Data JPA repository interface named `StaffRepository`.  It extends `JpaRepository` and provides custom queries for interacting with a `Staff` entity, including deleting inventory items and retrieving inventory counts.  The provided code snippet is incomplete, showing only part of the repository interface. This Java code snippet shows a Spring Data JPA repository interface and part of a JUnit test class. The repository defines a method to retrieve a Staff entity by username, while the test class sets up mock objects for testing controllers and services related to the Sakila database. This Java code is a JUnit test suite using Mockito for mocking and testing interactions with various repositories (ActorRepository, FilmRepository, etc.). It appears to be testing a service class, ActorService, that interacts with these repositories. This Java code snippet sets up a testing environment using Mockito for a movie rental application. It initializes controllers and services related to actors, films, categories, customers, inventory, and rentals, preparing for unit testing of these controllers. The Java code contains JUnit test cases that verify the functionality of `FilmController` and `CategoryController`.  These controllers likely handle requests related to films and categories, respectively, returning view names based on input parameters. The tests assert that the controllers return the expected view names for specific scenarios. The Java code contains JUnit tests for three different controllers: CategoryController, ActorController, and CustomerController.  Each test verifies the controller's functionality by checking the return value of a specific method against an expected string representing a view path. The Java code contains two JUnit test cases.  `testCustomerController2` tests the `showUsersRentalHistory` method of a `CustomerController`, asserting its return value. `testInventory` is an incomplete test case that appears to be setting up data for an `Inventory` object. The Java code contains two JUnit test cases.  The first test, `testInventory()`, appears to test the retrieval and manipulation of Inventory objects, verifying the InventoryId and LastUpdate fields. The second test, `testRental()`, is incomplete but seems intended to test a rental process involving Inventory and Customer objects. This Java code snippet appears to be a unit test, likely for a rental system.  It creates mock Rental and Staff objects, sets their attributes, and then uses a mocked repository to retrieve and assert properties of a rental with ID 10. This Java code contains JUnit test cases that seem to be testing functionalities related to rental and category objects.  The tests assert equality between expected and actual values of various attributes, such as IDs, timestamps, and customer/staff information.  More context is needed to fully understand the purpose and scope. This Java code contains JUnit tests for a `MainController` class within the `sakilaproject` application.  The tests verify that the controller's `home()` and `account()` methods return the expected string values: \"home\" and \"account\", respectively. The code appears to be part of a larger Spring Boot application (inferred from naming conventions). The provided code snippet is a JUnit test case that verifies the functionality of a login method within a  `MainController` class.  It instantiates `MainController`, calls the `login()` method, and asserts that the returned value equals \"login\". The scope is limited to a single test method.",
+    "functions": [
+        {
+            "function name": "main(String[] args)",
+            "description": "The main function which takes a base directory path as a command-line argument. It checks for a custom wrapper download URL in `maven-wrapper.properties` file within the base directory and prints messages to the console."
+        },
+        {
+            "function name": "Not applicable. This is a code snippet, not a function definition.",
+            "description": "This code snippet performs file I/O operations to read a URL from a properties file.  It does not define a named function."
+        },
+        {
+            "function name": "downloadFileFromURL(URL url, File outputFile)",
+            "description": "Downloads a file from the given URL to the specified output file.  The implementation is not shown in the provided snippet."
+        },
+        {
+            "function name": "downloadFileFromURL(String urlString, File destination)",
+            "description": "Downloads a file from the specified URL to the given destination file.  Handles HTTP Basic Authentication if environment variables MVNW_USERNAME and MVNW_PASSWORD are set."
+        },
+        {
+            "function name": "main(String[] args)",
+            "description": "The main method of the Spring Boot application, responsible for starting the application context."
+        },
+        {
+            "function name": "copyFile(String source, String destination)",
+            "description": "Copies a file from the source path to the destination path using file channels.  Handles potential exceptions implicitly.  Error handling is insufficient."
+        },
+        {
+            "function name": "onAccessDenied(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException)",
+            "description": "This is a partial function signature.  It appears to be a custom handler for AccessDeniedExceptions in Spring Security. It's implementation is not shown."
+        },
+        {
+            "function name": "handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException e)",
+            "description": "Handles access denied exceptions. It redirects the HTTP response to the \"/error\" context path."
+        },
+        {
+            "function name": "configure(AuthenticationManagerBuilder auth) throws Exception",
+            "description": "Configures the authentication manager using an in-memory authentication provider.  It likely sets up user credentials and roles."
+        },
+        {
+            "function name": "configure(HttpSecurity http) throws Exception",
+            "description": "Configures the HTTP security, defining authorization rules for different URLs. It specifies which URLs require authentication and the roles allowed to access them."
+        },
+        {
+            "function name": "passwordEncoder()",
+            "description": "Creates and returns a BCryptPasswordEncoder bean for password encoding, ensuring password security."
+        },
+        {
+            "function name": "authenticationProvider()",
+            "description": "Creates and returns a DaoAuthenticationProvider bean which integrates with the UserDetailsService to handle authentication requests."
+        },
+        {
+            "function name": "configure(HttpSecurity http)",
+            "description": "Configures Spring Security's HTTP security.  It defines access control rules based on roles (USER and ADMIN) for various URL paths, including resources like images, CSS, and potentially film-related content.  It also implicitly uses a custom success handler."
+        },
+        {
+            "function name": "configure(HttpSecurity http)",
+            "description": "Configures Spring Security's HTTP security.  It defines authorization rules using antMatchers for various paths, sets up form-based login with a custom success handler and login page, handles logout, and defines an error page for access denied situations."
+        },
+        {
+            "function name": "userDetailsService()",
+            "description": "Creates and returns a UserDetailsService bean, likely for user authentication and authorization, using a UserDetailsServiceImpl implementation."
+        },
+        {
+            "function name": "passwordEncoder()",
+            "description": "Creates and returns a PasswordEncoder bean, likely for password hashing and security."
+        },
+        {
+            "function name": "passwordEncoder()",
+            "description": "Creates and returns a new BCryptPasswordEncoder instance for password hashing."
+        },
+        {
+            "function name": "authenticationProvider()",
+            "description": "Creates and configures a DaoAuthenticationProvider. It sets the UserDetailsService and password encoder, returning the configured provider."
+        },
+        {
+            "function name": "configure(AuthenticationManagerBuilder auth)",
+            "description": "Configures the AuthenticationManagerBuilder by adding the configured authentication provider."
+        },
+        {
+            "function name": "UserDetailsServiceImpl()",
+            "description": "Constructor for the UserDetailsServiceImpl class.  It uses @Autowired to inject dependencies for CustomerRepository and StaffRepository."
+        },
+        {
+            "function name": "loadUserByUsername(String username)",
+            "description": "This method loads user details given a username. It searches both the customer and staff repositories. If a user is found, it creates a UserDetails object; otherwise, it throws a UsernameNotFoundException."
+        },
+        {
+            "function name": "loadUserByUsername(String anyUsername)",
+            "description": "Loads user details from either customer or staff repositories based on the provided username.  Throws UsernameNotFoundException if no user is found. Encodes the password using BCryptPasswordEncoder and assigns roles based on the user type."
+        },
+        {
+            "function name": "addViewControllers(ViewControllerRegistry registry)",
+            "description": "Registers view controllers for the application. Maps \"/home\" and \"/\" to the \"home\" view and \"/login\" to the \"login\" view."
+        },
+        {
+            "function name": "onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)",
+            "description": "Handles successful authentication.  This method is called by Spring Security after a user successfully logs in. It determines the redirect URL based on the authentication object and redirects the user accordingly.  The exact logic for determining the redirect URL is missing from the provided code snippet."
+        },
+        {
+            "function name": "onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)",
+            "description": "This method is invoked after a successful authentication. It determines the user's role based on granted authorities and redirects them to either the customer page ('/customer') for users or an unspecified page for administrators.  The exception handling is minimal."
+        },
+        {
+            "function name": "getCategories(ModelMap modelMap, @RequestParam(defaultValue = \"1\") Integer page)",
+            "description": "Retrieves categories, likely paginated, and adds them to the model for rendering a view.  Uses a service and handles potential exceptions."
+        },
+        {
+            "function name": "CategoryController(FilmService filmService, CategoryService categoryService)",
+            "description": "Constructor for the CategoryController, injecting dependencies for FilmService and CategoryService via Spring's autowiring."
+        },
+        {
+            "function name": "getCategories(ModelMap modelMap)",
+            "description": "Handles GET requests to /categories. Retrieves all categories using categoryService and adds them to the modelMap for rendering the categories/categories view."
+        },
+        {
+            "function name": "getCategoryDetails(ModelMap modelMap, @RequestParam(value = \"id\") Integer id)",
+            "description": "Handles GET requests to /categories/details. Retrieves category details by ID using categoryService and adds them to the modelMap for rendering a details view (view name not fully shown in provided code)."
+        },
+        {
+            "function name": "CategoryController.getCategoryDetails(Integer id, ModelMap model)",
+            "description": "Retrieves category details by ID and associated films using services, then renders a view named 'categories/categoryDetails'."
+        },
+        {
+            "function name": "CategoryController.getCategoryById(Integer id)",
+            "description": "Retrieves a category by its ID using the category service."
+        },
+        {
+            "function name": "ActorController. (No functions fully defined)",
+            "description": "The provided ActorController snippet doesn't show any fully defined functions.  It shows imports and annotations suggesting it will handle actor-related requests."
+        },
+        {
+            "function name": "ActorController(FilmService filmService, ActorService actorService)",
+            "description": "Constructor for ActorController, injecting dependencies for FilmService and ActorService."
+        },
+        {
+            "function name": "getActors(ModelMap modelMap, String firstNameFilter, String lastNameFilter)",
+            "description": "Handles GET requests to \"/actors\", retrieving a list of actors.  Applies filters based on firstNameFilter and lastNameFilter request parameters. Returns a String (likely a view name)."
+        },
+        {
+            "function name": "getActors(ModelMap modelMap, @RequestParam(value = \"firstName\") String firstNameFilter, @RequestParam(value = \"lastName\") String lastNameFilter)",
+            "description": "Retrieves a list of actors based on provided first and last name filters.  If either filter is \"ALL ACTORS\", it filters by the other name. Otherwise, it filters by both names.  Adds the filtered actors and all actors to the model map and returns the \"actors/actors\" view."
+        },
+        {
+            "function name": "getActorFilmDetails(ModelMap modelMap, @RequestParam(value = \"id\") Integer id)",
+            "description": "Retrieves details for a specific actor given their ID. Adds the actor's full name to the model map and returns a view (the return value is incomplete in the provided code)."
+        },
+        {
+            "function name": "getActorDetails(Integer id)",
+            "description": "Retrieves details for a specific actor, including associated films, and returns the name of the view to render.  The function uses a filmService and likely adds attributes to a Model object (implied by 'ap.addAttribute')."
+        },
+        {
+            "function name": "findActorById(Integer id)",
+            "description": "Retrieves an Actor object from the database based on the provided ID using an actorService."
+        },
+        {
+            "function name": "getActorFullNameFromID(Integer id)",
+            "description": "Retrieves an actor's full name (first and last) from the database given their ID, using an actorService."
+        },
+        {
+            "function name": "StaffController(StaffService staffService, CustomerService customerService, InventoryService inventoryService)",
+            "description": "Constructor for StaffController, injecting dependencies for staff, customer, and inventory services."
+        },
+        {
+            "function name": "currentUser(ModelMap modelMap, HttpServletRequest request)",
+            "description": "Handles requests to the \"/owner\" endpoint.  It likely retrieves and displays information based on the current user's context using data from services and request parameters, though the implementation is incomplete."
+        },
+        {
+            "function name": "getOwnerDashboard(HttpServletRequest request, ModelMap modelMap)",
+            "description": "Retrieves data for the owner's dashboard. It fetches the currently logged-in staff member using the request object, gets customer and inventory counts from respective services, and adds these data points to the modelMap for view rendering.  The function then returns the path to the owner's dashboard view."
+        },
+        {
+            "function name": "FilmController(FilmService filmService, InventoryService inventoryService, RentalService rentalService, CustomerService customerService)",
+            "description": "Constructor for FilmController, injecting dependencies for film, inventory, rental, and customer management."
+        },
+        {
+            "function name": "getFilms(ModelMap modelMap, @RequestParam(value = \"title\", defaultValue = \"ALL FILMS\") String filter)",
+            "description": "Retrieves a list of films. If the filter is \"ALL FILMS\", it fetches all films; otherwise, it fetches films matching the given title.  Adds the film list, available films, and all films to the ModelMap for view rendering."
+        },
+        {
+            "function name": "getFilmDetails(ModelMap modelMap, @RequestParam(value = \"id\") Integer id)",
+            "description": "Retrieves details for a specific film given its ID.  The function is incomplete in the provided code snippet."
+        },
+        {
+            "function name": "getLastUpdate()",
+            "description": "Returns the last update timestamp of the Staff object as a java.sql.Timestamp."
+        },
+        {
+            "function name": "setLastUpdate(Timestamp lastUpdate)",
+            "description": "Sets the last update timestamp of the Staff object."
+        },
+        {
+            "function name": "equals(Object o)",
+            "description": "Overrides the equals method to compare Staff objects based on staffId, active status, firstName, lastName, picture, email, and username."
+        },
+        {
+            "function name": "Staff.equals(Object obj)",
+            "description": "Compares this Staff object to another object for equality, considering staffId, firstName, lastName, email, active status, username, password, lastUpdate, and picture."
+        },
+        {
+            "function name": "Staff.hashCode()",
+            "description": "Generates a hash code for this Staff object based on its fields, including staffId, firstName, lastName, email, active status, username, password, lastUpdate, and picture."
+        },
+        {
+            "function name": "int getCustomerId()",
+            "description": "Retrieves the customer's ID."
+        },
+        {
+            "function name": "void setCustomerId(int customerId)",
+            "description": "Sets the customer's ID."
+        },
+        {
+            "function name": "String getFirstName()",
+            "description": "Retrieves the customer's first name."
+        },
+        {
+            "function name": "void setFirstName(String firstName)",
+            "description": "Sets the customer's first name."
+        },
+        {
+            "function name": "String getLastName()",
+            "description": "Retrieves the customer's last name."
+        },
+        {
+            "function name": "void setLastName(String lastName)",
+            "description": "Sets the customer's last name."
+        },
+        {
+            "function name": "String getEmail()",
+            "description": "Retrieves the customer's email address."
+        },
+        {
+            "function name": "void setEmail(String email)",
+            "description": "Sets the customer's email address."
+        },
+        {
+            "function name": "public byte getActive()",
+            "description": "Returns the active status of the entity as a byte."
+        },
+        {
+            "function name": "public void setActive(byte active)",
+            "description": "Sets the active status of the entity."
+        },
+        {
+            "function name": "public Timestamp getCreateDate()",
+            "description": "Returns the creation timestamp of the entity."
+        },
+        {
+            "function name": "public void setCreateDate(Timestamp createDate)",
+            "description": "Sets the creation timestamp of the entity."
+        },
+        {
+            "function name": "public Timestamp getLastUpdate()",
+            "description": "Returns the last update timestamp of the entity."
+        },
+        {
+            "function name": "public void setLastUpdate(Timestamp lastUpdate)",
+            "description": "Sets the last update timestamp of the entity."
+        },
+        {
+            "function name": "@Override public boolean equals(Object o)",
+            "description": "Overrides the equals method for object comparison (partially shown)."
+        },
+        {
+            "function name": "equals(Object o)",
+            "description": "Compares this Customer object to another Object o for equality. Returns true if all relevant fields (customerId, active, firstName, lastName, email, createDate, lastUpdate) are equal; otherwise, returns false."
+        },
+        {
+            "function name": "hashCode()",
+            "description": "Generates a hash code for the Customer object based on its customerId, firstName, lastName, email, active status, createDate and lastUpdate.  Used for efficient storage in hash-based collections."
+        },
+        {
+            "function name": "getActorId()",
+            "description": "Returns the actor's ID (integer)."
+        },
+        {
+            "function name": "setActorId(int actorId)",
+            "description": "Sets the actor's ID."
+        },
+        {
+            "function name": "getFirstName()",
+            "description": "Returns the actor's first name (String)."
+        },
+        {
+            "function name": "setFirstName(String firstName)",
+            "description": "Sets the actor's first name."
+        },
+        {
+            "function name": "getLastName()",
+            "description": "Returns the actor's last name (String)."
+        },
+        {
+            "function name": "setLastName(String lastName)",
+            "description": "Sets the actor's last name."
+        },
+        {
+            "function name": "getLastUpdate()",
+            "description": "Returns the timestamp of the last update (java.sql.Timestamp)."
+        },
+        {
+            "function name": "setLastUpdate(Timestamp lastUpdate)",
+            "description": "Sets the timestamp of the last update."
+        },
+        {
+            "function name": "getLastUpdate()",
+            "description": "Returns the last update timestamp of the Actor object as a Timestamp object."
+        },
+        {
+            "function name": "setLastUpdate(Timestamp lastUpdate)",
+            "description": "Sets the last update timestamp of the Actor object."
+        },
+        {
+            "function name": "equals(Object o)",
+            "description": "Overrides the equals method to compare two Actor objects based on their actorId, firstName, lastName, and lastUpdate."
+        },
+        {
+            "function name": "hashCode()",
+            "description": "Overrides the hashCode method to generate a hash code for the Actor object based on its actorId, firstName, lastName, and lastUpdate."
+        },
+        {
+            "function name": "Order(Customer customer, Film film, Rental rental)",
+            "description": "Constructor for the Order class, initializing the customer, film, and rental attributes."
+        },
+        {
+            "function name": "getCustomer()",
+            "description": "Returns the Customer object associated with the order."
+        },
+        {
+            "function name": "setCustomer(Customer customer)",
+            "description": "Sets the Customer object associated with the order."
+        },
+        {
+            "function name": "getFilm()",
+            "description": "Returns the Film object associated with the order."
+        },
+        {
+            "function name": "setFilm(Film film)",
+            "description": "Sets the Film object associated with the order."
+        },
+        {
+            "function name": "getRental()",
+            "description": "Returns the Rental object associated with the order."
+        },
+        {
+            "function name": "setRental(Rental rental)",
+            "description": "Sets the Rental object associated with the order."
+        },
+        {
+            "function name": "getRentalId()",
+            "description": "Returns the rental ID."
+        },
+        {
+            "function name": "setRentalId(int rentalId)",
+            "description": "Sets the rental ID."
+        },
+        {
+            "function name": "getRentalDate()",
+            "description": "Returns the rental date as a Timestamp."
+        },
+        {
+            "function name": "setRentalDate(Timestamp rentalDate)",
+            "description": "Sets the rental date."
+        },
+        {
+            "function name": "getInventoryId()",
+            "description": "Returns the inventory ID."
+        },
+        {
+            "function name": "setInventoryId(int inventoryId)",
+            "description": "Sets the inventory ID."
+        },
+        {
+            "function name": "getCustomerId()",
+            "description": "Returns the customer ID."
+        },
+        {
+            "function name": "setCustomerId(int customerId)",
+            "description": "Sets the customer ID."
+        },
+        {
+            "function name": "getReturnDate()",
+            "description": "Returns the return date as a Timestamp."
+        },
+        {
+            "function name": "setReturnDate(Timestamp returnDate)",
+            "description": "Sets the return date."
+        },
+        {
+            "function name": "getLastUpdate()",
+            "description": "Returns the last update timestamp."
+        },
+        {
+            "function name": "setLastUpdate(Timestamp lastUpdate)",
+            "description": "Sets the last update timestamp."
+        },
+        {
+            "function name": "getStaffId()",
+            "description": "Returns the staff ID."
+        },
+        {
+            "function name": "setStaffId(int staffId)",
+            "description": "Sets the staff ID."
+        },
+        {
+            "function name": "setInventoryId(int inventoryId)",
+            "description": "Sets the inventory ID of the rental or return."
+        },
+        {
+            "function name": "getCustomerId()",
+            "description": "Returns the customer ID associated with the rental or return."
+        },
+        {
+            "function name": "setCustomerId(int customerId)",
+            "description": "Sets the customer ID associated with the rental or return."
+        },
+        {
+            "function name": "getReturnDate()",
+            "description": "Returns the return date of the rental or return as a Timestamp."
+        },
+        {
+            "function name": "setReturnDate(Timestamp returnDate)",
+            "description": "Sets the return date of the rental or return."
+        },
+        {
+            "function name": "getStaffId()",
+            "description": "Returns the staff ID who processed the rental or return."
+        },
+        {
+            "function name": "setStaffId(int staffId)",
+            "description": "Sets the staff ID who processed the rental or return."
+        },
+        {
+            "function name": "getLastUpdate()",
+            "description": "Returns the timestamp of the last update to the record."
+        },
+        {
+            "function name": "public int getRentalId()",
+            "description": "Returns the rental ID."
+        },
+        {
+            "function name": "public void setRentalId(int rentalId)",
+            "description": "Sets the rental ID."
+        },
+        {
+            "function name": "public int getInventoryId()",
+            "description": "Returns the inventory ID."
+        },
+        {
+            "function name": "public void setInventoryId(int inventoryId)",
+            "description": "Sets the inventory ID."
+        },
+        {
+            "function name": "public int getCustomerId()",
+            "description": "Returns the customer ID."
+        },
+        {
+            "function name": "public void setCustomerId(int customerId)",
+            "description": "Sets the customer ID."
+        },
+        {
+            "function name": "public int getStaffId()",
+            "description": "Returns the staff ID."
+        },
+        {
+            "function name": "public void setStaffId(int staffId)",
+            "description": "Sets the staff ID."
+        },
+        {
+            "function name": "public Date getRentalDate()",
+            "description": "Returns the rental date."
+        },
+        {
+            "function name": "public void setRentalDate(Date rentalDate)",
+            "description": "Sets the rental date."
+        },
+        {
+            "function name": "public Date getReturnDate()",
+            "description": "Returns the return date."
+        },
+        {
+            "function name": "public void setReturnDate(Date returnDate)",
+            "description": "Sets the return date."
+        },
+        {
+            "function name": "public Timestamp getLastUpdate()",
+            "description": "Returns the last update timestamp."
+        },
+        {
+            "function name": "public void setLastUpdate(Timestamp lastUpdate)",
+            "description": "Sets the last update timestamp."
+        },
+        {
+            "function name": "@Override public boolean equals(Object o)",
+            "description": "Overrides the equals method for proper object comparison based on all attributes."
+        },
+        {
+            "function name": "@Override public int hashCode()",
+            "description": "Overrides the hashCode method for consistent hashing based on all attributes."
+        },
+        {
+            "function name": "getFilmId()",
+            "description": "Returns the film ID (int)."
+        },
+        {
+            "function name": "setFilmId(Integer filmId)",
+            "description": "Sets the film ID."
+        },
+        {
+            "function name": "getCategoryId()",
+            "description": "Returns the category ID (int)."
+        },
+        {
+            "function name": "setCategoryId(Integer categoryId)",
+            "description": "Sets the category ID."
+        },
+        {
+            "function name": "FilmCategory(int filmId, int categoryId, Timestamp lastUpdate)",
+            "description": "Constructor for the FilmCategory class, initializing filmId, categoryId, and lastUpdate."
+        },
+        {
+            "function name": "int getFilmId()",
+            "description": "Returns the film ID."
+        },
+        {
+            "function name": "void setFilmId(int filmId)",
+            "description": "Sets the film ID."
+        },
+        {
+            "function name": "int getCategoryId()",
+            "description": "Returns the category ID."
+        },
+        {
+            "function name": "void setCategoryId(int categoryId)",
+            "description": "Sets the category ID."
+        },
+        {
+            "function name": "Timestamp getLastUpdate()",
+            "description": "Returns the last update timestamp."
+        },
+        {
+            "function name": "void setLastUpdate(Timestamp lastUpdate)",
+            "description": "Sets the last update timestamp."
+        },
+        {
+            "function name": "boolean equals(Object o)",
+            "description": "Overrides the equals method for object comparison based on filmId, categoryId, and lastUpdate."
+        },
+        {
+            "function name": "int hashCode()",
+            "description": "Overrides the hashCode method for consistent hashing based on filmId, categoryId, and lastUpdate."
+        },
+        {
+            "function name": "getInventoryId()",
+            "description": "Returns the inventory ID (integer)."
+        },
+        {
+            "function name": "setInventoryId(int inventoryId)",
+            "description": "Sets the inventory ID (integer)."
+        },
+        {
+            "function name": "getFilmId()",
+            "description": "Returns the film ID (integer)."
+        },
+        {
+            "function name": "setFilmId(int filmId)",
+            "description": "Sets the film ID (integer)."
+        },
+        {
+            "function name": "getLastUpdate()",
+            "description": "Returns the last update timestamp."
+        },
+        {
+            "function name": "setLastUpdate(Timestamp lastUpdate)",
+            "description": "Sets the last update timestamp."
+        },
+        {
+            "function name": "equals(Object o)",
+            "description": "Overrides the equals method to compare two Inventory objects based on their inventoryId and lastUpdate fields."
+        },
+        {
+            "function name": "hashCode()",
+            "description": "Overrides the hashCode method to generate a hash code for an Inventory object based on its inventoryId and lastUpdate fields."
+        },
+        {
+            "function name": "getFilmId()",
+            "description": "Returns the filmId attribute of the FilmCategoryPK object.  Note: The provided code snippet is incomplete and lacks the full function body."
+        },
+        {
+            "function name": "getCategoryId()",
+            "description": "Returns the categoryId attribute of the FilmCategoryPK object. Note:  The provided code snippet is incomplete and lacks the full function body."
+        },
+        {
+            "function name": "getFilmId()",
+            "description": "Returns the film ID."
+        },
+        {
+            "function name": "setFilmId(int filmId)",
+            "description": "Sets the film ID."
+        },
+        {
+            "function name": "getCategoryId()",
+            "description": "Returns the category ID."
+        },
+        {
+            "function name": "setCategoryId(int categoryId)",
+            "description": "Sets the category ID."
+        },
+        {
+            "function name": "equals(Object o)",
+            "description": "Overrides the equals method for proper comparison of FilmCategoryPK objects."
+        },
+        {
+            "function name": "hashCode()",
+            "description": "Overrides the hashCode method for consistent hashing of FilmCategoryPK objects."
+        },
+        {
+            "function name": "StaffService(StaffRepository staffRepository)",
+            "description": "Constructor for the StaffService class, injecting a StaffRepository dependency for data persistence."
+        },
+        {
+            "function name": "getAllStaff()",
+            "description": "Retrieves and returns a list of all Staff entities from the database using the injected StaffRepository."
+        },
+        {
+            "function name": "public List<Staff> getAllStaff()",
+            "description": "Retrieves all staff records from the staffRepository."
+        },
+        {
+            "function name": "public Staff getStaffByUsername(String username)",
+            "description": "Retrieves a staff record from the staffRepository using the provided username."
+        },
+        {
+            "function name": "public InventoryService(InventoryRepository inventoryRepository)",
+            "description": "Constructor for InventoryService, injecting an InventoryRepository dependency."
+        },
+        {
+            "function name": "public List<Inventory> getAllInventory()",
+            "description": "Retrieves all inventory records from the inventoryRepository. (Inferred from function signature, code is incomplete)."
+        },
+        {
+            "function name": "getAllInventory()",
+            "description": "Retrieves all inventory items from the inventoryRepository."
+        },
+        {
+            "function name": "getInventoriesById(Integer id)",
+            "description": "Retrieves an inventory item by its ID from the inventoryRepository."
+        },
+        {
+            "function name": "deleteInventoryItemById(Integer id)",
+            "description": "Deletes an inventory item by its ID from the inventoryRepository.  Uses @Transactional for database transaction management."
+        },
+        {
+            "function name": "getInventoryCount()",
+            "description": "Retrieves the total count of inventory items from the inventoryRepository."
+        },
+        {
+            "function name": "ActorService(ActorRepository actorRepository)",
+            "description": "Constructor for the ActorService class, injecting the ActorRepository dependency."
+        },
+        {
+            "function name": "List<Actor> getAllActors()",
+            "description": "Retrieves all actors from the repository."
+        },
+        {
+            "function name": "Actor getActorByID(int id)",
+            "description": "Retrieves an actor from the repository by their ID."
+        },
+        {
+            "function name": "List<Actor> getActorsByFullName(String firstName, String lastName)",
+            "description": "Retrieves actors from the repository by their full name (first and last name)."
+        },
+        {
+            "function name": "List<Actor> getActorsByFirstName(String firstName)",
+            "description": "Retrieves actors from the repository by their first name."
+        },
+        {
+            "function name": "List<Actor> getActorsByLastName(String lastName)",
+            "description": "Retrieves actors from the repository by their last name."
+        },
+        {
+            "function name": "getAllFilms()",
+            "description": "Retrieves and returns a list of all films from the FilmRepository."
+        },
+        {
+            "function name": "getActorFullNameFromID(Integer id)",
+            "description": "Retrieves an actor's full name (first and last) from their ID by first fetching the Actor object using an assumed `getActorByID` method (not shown)."
+        },
+        {
+            "function name": "public List<Film> getAllFilms()",
+            "description": "Retrieves all films from the repository."
+        },
+        {
+            "function name": "public Film getFilmByID(int id)",
+            "description": "Retrieves a film from the repository by its ID."
+        },
+        {
+            "function name": "public List<Film> getFilmsByTitle(String title)",
+            "description": "Retrieves films from the repository matching a given title."
+        },
+        {
+            "function name": "public List<Film> getAvailableFilms()",
+            "description": "Retrieves all available films from the repository."
+        },
+        {
+            "function name": "public Integer getAvailableFilmCount(Integer id)",
+            "description": "Retrieves the count of available films, potentially filtered by an ID (context unclear)."
+        },
+        {
+            "function name": "public List<Film> getFilmsByCategory(Integer id)",
+            "description": "Retrieves films from the repository belonging to a specific category ID."
+        },
+        {
+            "function name": "public List<Film> getFilmsByActor(Integer id)",
+            "description": "Retrieves films from the repository featuring a specific actor ID."
+        },
+        {
+            "function name": "public void save(Film film)",
+            "description": "Saves a film to the repository."
+        },
+        {
+            "function name": "public void deleteFilmById(int id)",
+            "description": "Deletes a film from the repository by its ID."
+        },
+        {
+            "function name": "CategoryService(CategoryRepository categoryRepository)",
+            "description": "Constructor for CategoryService, injecting the CategoryRepository dependency."
+        },
+        {
+            "function name": "getAllCategories()",
+            "description": "Retrieves and returns a list of all Category entities from the repository."
+        },
+        {
+            "function name": "getByCategoryId(Integer id)",
+            "description": "Retrieves and returns a single Category entity from the repository based on the provided ID."
+        },
+        {
+            "function name": "CategoryRepository.getCategoryByCategoryId(Integer id)",
+            "description": "Retrieves a Category entity from the database based on its ID."
+        },
+        {
+            "function name": "ActorRepository.findAll()",
+            "description": "Retrieves all Actor entities from the database. (Inherited from JpaRepository)"
+        },
+        {
+            "function name": "ActorRepository.findById(Integer id)",
+            "description": "Retrieves an Actor entity from the database based on its ID. (Inherited from JpaRepository)"
+        },
+        {
+            "function name": "ActorRepository.save(Actor actor)",
+            "description": "Saves or updates an Actor entity in the database. (Inherited from JpaRepository)"
+        },
+        {
+            "function name": "ActorRepository.delete(Actor actor)",
+            "description": "Deletes an Actor entity from the database. (Inherited from JpaRepository)"
+        },
+        {
+            "function name": "ActorRepository.deleteById(Integer id)",
+            "description": "Deletes an Actor entity from the database based on its ID. (Inherited from JpaRepository)"
+        },
+        {
+            "function name": "ActorRepository.count()",
+            "description": "Returns the number of Actor entities in the database. (Inherited from JpaRepository)"
+        },
+        {
+            "function name": "ActorRepository.existsById(Integer id)",
+            "description": "Checks if an Actor entity with the given ID exists in the database. (Inherited from JpaRepository)"
+        },
+        {
+            "function name": "findActorsByFirstNameAndLastName(String firstName, String lastName)",
+            "description": "Retrieves a list of actors matching the given first and last names."
+        },
+        {
+            "function name": "findActorsByFirstName(String firstName)",
+            "description": "Retrieves a list of actors matching the given first name."
+        },
+        {
+            "function name": "findActorsByLastName(String lastName)",
+            "description": "Retrieves a list of actors matching the given last name."
+        },
+        {
+            "function name": "getActorByActorId(Integer id)",
+            "description": "Retrieves an actor by their ID."
+        },
+        {
+            "function name": "getRentalByRentalId(Integer id)",
+            "description": "Retrieves a rental by its ID."
+        },
+        {
+            "function name": "Custom Query in RentalRepository (Incomplete)",
+            "description": "An incomplete JPQL query intended to retrieve rentals based on customer ID. The query is missing a closing parenthesis and WHERE clause condition."
+        },
+        {
+            "function name": "getCustomerByCredentials(String username, Integer password)",
+            "description": "Retrieves a Customer entity from the database based on provided email (username) and customer ID (password) using a native SQL query."
+        },
+        {
+            "function name": "getCustomerByUsername(String username)",
+            "description": "Retrieves a Customer entity from the database based on the provided email (username) using a native SQL query."
+        },
+        {
+            "function name": "getRentalByCustomerId(Integer customerId)",
+            "description": "Retrieves a list of Rentals associated with a given customer ID.  The function signature is incomplete in the provided code snippet;  it lacks the return type annotation."
+        },
+        {
+            "function name": "Customer getCustomerByUsername(String username)",
+            "description": "Retrieves a Customer object from the database based on the provided username."
+        },
+        {
+            "function name": "List<Customer> getCustomersByFirstName(String firstName)",
+            "description": "Retrieves a list of Customer objects from the database whose first name matches the provided firstName."
+        },
+        {
+            "function name": "List<Customer> getCustomersByLastName(String lastName)",
+            "description": "Retrieves a list of Customer objects from the database whose last name matches the provided lastName."
+        },
+        {
+            "function name": "List<Customer> getCustomersByFullName(String firstName, String lastName)",
+            "description": "Retrieves a list of Customer objects from the database whose first and last names match the provided firstName and lastName."
+        },
+        {
+            "function name": "Customer getCustomerByCustomerId(Integer id)",
+            "description": "Retrieves a Customer object from the database based on the provided customer ID."
+        },
+        {
+            "function name": "Customer getCustomerByEmail(String email)",
+            "description": "Retrieves a Customer object from the database based on the provided email address."
+        },
+        {
+            "function name": "Long countCustomers()",
+            "description": "Counts all customers in the database and returns the total count."
+        },
+        {
+            "function name": "Integer getAvailableFilmCount(Integer id)",
+            "description": "Retrieves the count of available films (from the inventory) associated with a given film ID using a native SQL query."
+        },
+        {
+            "function name": "Integer getCustomerCount()",
+            "description": "This function is incomplete in the provided code snippet.  It's declared but not implemented, suggesting it would retrieve the total number of customers."
+        },
+        {
+            "function name": "List<Film> getAvailableFilms()",
+            "description": "Retrieves all available films using a native SQL query joining the 'film' and 'inventory' tables."
+        },
+        {
+            "function name": "List<Film> getAllFilmsByCategory(Integer categoryId)",
+            "description": "Retrieves all films belonging to a specific category using a native SQL query joining 'film', 'film_category', and 'category' tables."
+        },
+        {
+            "function name": "List<Film> getAllFilmsByActor(Integer actorId)",
+            "description": "Retrieves all films featuring a specific actor using a native SQL query joining 'actor', 'film_actor', and 'film' tables."
+        },
+        {
+            "function name": "List<Film> findByTitle(String title)",
+            "description": "Retrieves films matching a given title (presumably using Spring Data JPA's automatic query derivation)."
+        },
+        {
+            "function name": "Film getFilmByFilmId(Integer id)",
+            "description": "Retrieves a film by its ID (presumably using Spring Data JPA's automatic query derivation)."
+        },
+        {
+            "function name": "getInventoriesByInventoryId(Integer inventoryId)",
+            "description": "Retrieves an Inventory entity using a given inventory ID by joining the `inventory` and `rental` tables. Returns an Inventory object or null if not found."
+        },
+        {
+            "function name": "deleteInventoryByInventoryId(Integer id)",
+            "description": "Deletes inventory items from the database based on the provided inventory ID using a native SQL query. It uses Spring Data JPA's `@Query` annotation."
+        },
+        {
+            "function name": "getInventoryCount()",
+            "description": "Retrieves the total count of inventory items from the database using a native SQL query. It uses Spring Data JPA's `@Query` annotation and returns an Integer."
+        },
+        {
+            "function name": "Staff getStaffByUsername(String username)",
+            "description": "Retrieves a Staff entity from the database based on the provided username.  Uses a native query for database interaction."
+        },
+        {
+            "function name": "init()",
+            "description": "Initializes the mock objects using MockitoAnnotations.initMocks(). This method is annotated with @Before, indicating it's executed before each test."
+        },
+        {
+            "function name": "testActorById()",
+            "description": "Tests the `findActorById` method of the `ActorController`. It creates a mock Actor object, stubs the `actorRepository.getActorByActorId` method to return the mock actor, and then calls `findActorById` to verify the controller's behavior."
+        },
+        {
+            "function name": "testFilm()",
+            "description": "Tests the `getFilms` method of the `FilmController` class.  It asserts that calling `getFilms` with a `ModelMap` and the filter \"Filter\" returns the string \"/films/films\"."
+        },
+        {
+            "function name": "testCategory()",
+            "description": "Tests the `getCategoryDetails` method of the `CategoryController` class. It asserts that calling `getCategoryDetails` with a `ModelMap` and the ID 10 returns the string \"categories/categoryDetails\"."
+        },
+        {
+            "function name": "testCategory2()",
+            "description": "This test case is incomplete in the provided code snippet. It appears to be another test for the `CategoryController`, likely involving the `getCategories` method."
+        },
+        {
+            "function name": "testCategoryController()",
+            "description": "Tests the CategoryController's getCategories method. It initializes a ModelMap, creates a CategoryController instance, calls getCategories, and asserts that the returned string equals \"/categories/categories\"."
+        },
+        {
+            "function name": "testActorController1()",
+            "description": "Tests the ActorController's getActors method. It initializes a ModelMap, creates an ActorController instance, calls getActors with specific parameters, and asserts that the returned string equals \"actors/actors\"."
+        },
+        {
+            "function name": "testCustomerController()",
+            "description": "Tests the CustomerController's getCustomers method. It initializes a ModelMap, creates a CustomerController instance, calls getCustomers with specific parameters, and asserts that the returned string equals \"owner/customers\"."
+        },
+        {
+            "function name": "testCustomerController2",
+            "description": "Tests the `showUsersRentalHistory` method of the `CustomerController` class.  It creates a `CustomerController` instance, calls `showUsersRentalHistory` with a `ModelMap` and customer ID 10, and asserts that the returned string equals \"owner/customerDetails\"."
+        },
+        {
+            "function name": "testInventory",
+            "description": "An incomplete JUnit test case that initializes a `Film` object and partially initializes an `Inventory` object. The test case is not complete as it's cut off before any assertions are made."
+        },
+        {
+            "function name": "testInventory()",
+            "description": "This JUnit test verifies the functionality of retrieving and setting InventoryId and LastUpdate properties of an Inventory object. It uses mocking to simulate database interaction."
+        },
+        {
+            "function name": "testRental()",
+            "description": "This JUnit test is incomplete.  It appears to be designed to test a rental function involving Customer and Inventory objects but lacks complete implementation."
+        },
+        {
+            "function name": "setRentalId(int rentalId)",
+            "description": "Sets the rental ID for a Rental object."
+        },
+        {
+            "function name": "setReturnDate(Timestamp returnDate)",
+            "description": "Sets the return date for a Rental object."
+        },
+        {
+            "function name": "setRentalDate(Timestamp rentalDate)",
+            "description": "Sets the rental date for a Rental object."
+        },
+        {
+            "function name": "setInventoryId(int inventoryId)",
+            "description": "Sets the inventory ID for a Rental object."
+        },
+        {
+            "function name": "setCustomerId(int customerId)",
+            "description": "Sets the customer ID for a Rental object."
+        },
+        {
+            "function name": "setLastUpdate(Timestamp lastUpdate)",
+            "description": "Sets the last update timestamp for a Rental object."
+        },
+        {
+            "function name": "setStaffId(int staffId)",
+            "description": "Sets the staff ID for a Rental object."
+        },
+        {
+            "function name": "setFirstName(String firstName)",
+            "description": "Sets the first name for a Staff object."
+        },
+        {
+            "function name": "setLastName(String lastName)",
+            "description": "Sets the last name for a Staff object."
+        },
+        {
+            "function name": "getRentalByRentalId(int rentalId)",
+            "description": "Retrieves a Rental object from the repository based on rental ID (mocked in this example)."
+        },
+        {
+            "function name": "getRentalId()",
+            "description": "Gets the rental ID of a Rental object."
+        },
+        {
+            "function name": "getInventoryId()",
+            "description": "Gets the inventory ID of a Rental object."
+        },
+        {
+            "function name": "getLastUpdate()",
+            "description": "Gets the last update timestamp of a Rental object."
+        },
+        {
+            "function name": "getCustomerId()",
+            "description": "Gets the customer ID of a Rental object."
+        },
+        {
+            "function name": "getStaffId()",
+            "description": "Gets the staff ID of a Staff object."
+        },
+        {
+            "function name": "testRentalByTimeStamp()",
+            "description": "This test method verifies the attributes of a 'Rental' object. It checks the equality of customer ID, staff ID, rental date, and return date against expected values derived from a timestamp."
+        },
+        {
+            "function name": "testCategoryByTimeStamp()",
+            "description": "This test method checks the attributes of a 'Category' object. It asserts the equality of the last update timestamp for a category with ID 10."
+        },
+        {
+            "function name": "MainController1()",
+            "description": "Tests the `home()` method of `MainController`, asserting that it returns \"home\"."
+        },
+        {
+            "function name": "MainController2()",
+            "description": "Tests the `account()` method of `MainController`, asserting that it returns \"account\"."
+        },
+        {
+            "function name": "MainController3()",
+            "description": "This function is incomplete in the provided code snippet; it's impossible to provide a description."
+        },
+        {
+            "function name": "MainController.login()",
+            "description": "This function is part of the MainController class and is responsible for handling the user login process.  The specific implementation is not shown in the provided code snippet, but the test asserts that it returns the string \"login\"."
+        },
+        {
+            "function name": "assertEquals(result, \"login\")",
+            "description": "This is a JUnit assertion method that checks if the value of the `result` variable is equal to the string \"login\".  It's used to validate the outcome of the `login()` method."
+        }
+    ],
+    "complexity": {
+        "score": "3/10",
+        "description": "Based on the provided snippet, the complexity is low.  The code only shows the class declaration and imports. Without seeing the actual function implementations, it's impossible to assess the full complexity, but the class declaration itself is simple. The code is relatively simple and straightforward.  It performs basic file operations and string manipulation.  The incompleteness of the code prevents a higher complexity score.  The lack of error handling also contributes to a lower score.  The code is relatively simple and straightforward. It involves basic file I/O and property handling. The use of try-finally for resource management improves the code's robustness. However, the lack of specific error reporting and the swallowing of exceptions in the finally block make it less robust.  It is simple enough to be considered low complexity. The code is relatively straightforward with basic file I/O and error handling.  The complexity stems from the file system operations (directory creation and file download) and exception handling, which could be improved by more specific exception types and potentially better error reporting. The main logic is linear and easy to follow. The code uses relatively straightforward methods but incorporates exception handling and conditional authentication logic, increasing complexity.  The use of anonymous inner classes for authentication adds a slight layer of complexity.  The incompleteness of the code prevents a more precise assessment. The provided code snippets are relatively simple.  The `main` function is trivial. The file copy function has minimal error handling and no input validation, making it fragile. The incomplete `onAccessDenied` function prevents a full assessment of its complexity. The overall project complexity is likely higher than this, but the provided code alone is simple. The code is very simple and straightforward.  The `handle` function performs a single action with minimal logic. The lack of error handling beyond the declared exceptions also contributes to the low complexity. The incompleteness of the provided code prevents a more thorough complexity assessment. The code uses Spring Security which adds complexity. While the individual functions are relatively straightforward, understanding the interplay between authentication, authorization, and the Spring Security framework requires some familiarity with the framework. The use of annotations simplifies some aspects.  The lack of custom UserDetailsService implementation reduces complexity. The code is relatively straightforward.  The complexity arises primarily from the nested structure of the `configure` method and the numerous `antMatchers` calls which could become more complex with a larger number of paths to secure.  However, the individual components and logic within are fairly simple and easy to understand. The code is relatively straightforward.  It uses standard Spring Security configurations. The complexity is mainly due to the nested calls and multiple features configured within the `configure` method.  However, each individual part is easily understandable. The code is relatively simple and straightforward. It uses established Spring Security components and follows a clear configuration pattern.  There's minimal logic and no complex algorithms or data structures involved. The code is relatively straightforward.  It has a clear structure with dependency injection and a single core function. The complexity might increase if more user types or authentication logic were added.  The use of separate repositories makes it slightly more complex than a single-repository solution. The core logic is easy to understand and maintain. The code is relatively straightforward.  It has a simple conditional logic to handle different user types and uses established libraries (BCryptPasswordEncoder). The length is short, and the logic is easy to follow.  However, error handling could be improved (e.g., more specific exception types) and the direct use of `String.valueOf(customer.getCustomerId())` for password encoding might be a security concern (depending on the context of `customer.getCustomerId()`). The code is very straightforward and simple. It performs a basic mapping of URLs to views using readily available Spring MVC functionalities.  There is minimal logic involved. The provided code snippet is relatively simple, mainly defining a class and declaring a field. The core logic for redirecting is absent, making it low complexity. The complexity would increase significantly if the onAuthenticationSuccess method were fully implemented with conditional logic to handle various roles or authentication scenarios. The code is relatively straightforward and easy to understand. It has simple conditional logic and direct function calls. However, the exception handling is inadequate, which could decrease maintainability in the long run. The missing redirection URL for 'ROLE_ADMIN' reduces clarity and score. The code is relatively straightforward. It primarily involves basic Spring annotations and method calls to services. The exception handling is minimal, and there's no significant nested logic or complex algorithms.  However, the lack of robust error handling and the comment \"// TODO Auto-generated catch block\" indicate potential areas for improvement. The code is relatively simple and straightforward.  It uses dependency injection and Spring annotations effectively, but lacks error handling and input validation. The functions are focused and have limited internal logic. The complexity could increase significantly with the addition of more features or complex business logic within the service layer. The provided code is relatively simple.  The CategoryController functions are straightforward and utilize service calls.  The lack of complete ActorController implementation prevents a full complexity assessment, but based on what is visible it appears to have low complexity. The code is well-structured but more detailed analysis is needed for higher score. The code is relatively straightforward.  The `getActors` function has a simple conditional for filtering, but it lacks more complex logic or error handling. The dependency injection is simple. The code's size is small and easy to understand. The code is relatively straightforward.  The logic for filtering actors is clear, though it could be slightly improved by using a more structured approach (e.g., enums for filter options). The use of ModelMap is standard for Spring MVC. The incompleteness of the second function and lack of error handling slightly increases complexity. The code is relatively simple and straightforward. Each function performs a single, well-defined task with minimal logic.  The use of service classes promotes separation of concerns. The lack of error handling and input validation is a potential area for improvement. The code is relatively simple. It primarily consists of a controller class with a constructor and a single request-handling method.  The complexity is low because the `currentUser` method is incomplete, preventing a full assessment.  The use of Spring annotations and dependency injection adds some complexity, but overall, it's straightforward. The code is straightforward and consists of simple method calls and data assignments. There's minimal logic involved; it primarily acts as a data retrieval and preparation step for view rendering. No complex algorithms or data structures are used. The provided code snippet only shows imports and annotations; no functions are defined. Therefore, the complexity is very low.  A complexity assessment requires the actual function implementations. The provided code snippet only shows the controller class definition and its constructor.  It lacks any actual request handling methods. The constructor is straightforward, resulting in a low complexity score.  The complexity would significantly increase once the actual request handling methods are added. The code is relatively straightforward with simple conditional logic and direct database interaction via a service layer. The incompleteness of `getFilmDetails` prevents a higher score.  There's potential for improvement in terms of error handling and input validation. The code is relatively straightforward.  The getter and setter are simple. The equals method is slightly more complex due to the multiple field comparisons, but it's still quite readable and understandable.  The incompleteness of the `equals` method (missing a final `Objects.equals` call) adds a minor complexity but it's likely a simple omission. The code is relatively simple and straightforward.  The equals and hashCode methods use standard Java libraries (Objects and Arrays) for object comparison and hash code generation.  The complexity arises primarily from the number of fields considered in the equals and hashCode methods, making them somewhat lengthy but not inherently complex. The code is very simple and straightforward. It consists of basic getter and setter methods for a Customer entity.  There is no complex logic or algorithm involved. The use of annotations simplifies the code further. The code is very simple and straightforward. It consists mainly of getter and setter methods with basic data types and standard annotations. The only slightly more complex part is the equals method, which is partially shown and would likely involve multiple field comparisons if fully implemented.  Overall, the structure is clear and easy to understand. The code is relatively straightforward. The equals method performs several comparisons, but the logic is clear and easy to follow.  The hashCode method uses the Objects.hash utility, which simplifies implementation and reduces potential errors.  No complex algorithms or control flows are present. The code is very simple and straightforward. It consists only of basic getter and setter methods for a data class with no complex logic or algorithms.  The use of annotations slightly increases complexity but remains trivial. The code is relatively simple and straightforward.  It consists mainly of getter/setter methods and overridden equals/hashCode methods which are common and well-understood patterns.  There is no complex logic or algorithms involved. The code is very simple and straightforward. It consists only of a basic class definition with getters and setters, and a constructor.  There is no complex logic or algorithms involved. The code is very simple. It's a basic POJO (Plain Old Java Object) with getters and setters for each attribute. There is no significant logic or complexity within the class. The code is very simple. It consists only of basic getter and setter methods with no complex logic or branching.  The use of annotations suggests integration with a framework like JPA, but the complexity remains low due to the simplicity of each individual method. The code is relatively simple and straightforward.  It consists mainly of getters and setters and standard overridden methods (`equals`, `hashCode`). The logic within these methods is also uncomplicated. The code is simple and straightforward. It mainly consists of standard getter and setter methods for an entity class with a composite key. There is no complex logic or algorithms involved. The code is relatively simple and straightforward.  It consists mainly of getters, setters, and standard equals/hashCode overrides.  There's no complex logic or algorithms involved. The code is very simple and straightforward. It consists of basic getter and setter methods for the Inventory entity's attributes.  There is no complex logic or algorithms involved. The code is relatively simple. The equals and hashCode methods are straightforward implementations using standard Java libraries.  The FilmCategoryPK class is a simple data holder. The incompleteness of FilmCategoryPK lowers the complexity score. The code is straightforward and simple.  It consists mainly of basic getter/setter methods and standard overrides of equals and hashCode. There is no significant logic or complex algorithms. The provided code snippet is very simple and contains only basic data retrieval and dependency injection. The complexity is low because it doesn't involve complex logic or algorithms.  The incomplete rental handling section also contributes to low complexity because its functionality isn't fully defined. The code is very simple and straightforward. Each function performs a single, clear operation with minimal logic.  The lack of error handling or complex business logic contributes to the low complexity. The incompleteness of the `InventoryService` also keeps the complexity score low. The code is straightforward and uses simple CRUD (Create, Read, Update, Delete) operations. Each function performs a single, well-defined task with minimal internal logic. The use of a repository simplifies the code and keeps it easy to understand and maintain. The code is straightforward and simple. Each function performs a single, well-defined task with minimal logic. There is no significant nesting or complex control flow. The dependency injection is a positive aspect. The code is relatively simple and straightforward.  The functions have clear responsibilities and are easy to understand.  The complexity is mainly due to the reliance on an external `getActorByID` method, whose complexity is unknown and could significantly affect the overall score.  The lack of error handling (e.g., `getActorByID` might return null) also slightly increases the complexity.  The code could benefit from more robust error handling and clearer separation of concerns if the actor retrieval logic truly belongs elsewhere. The code is straightforward with simple function calls delegating tasks to the underlying repository.  Low complexity stems from the lack of significant logic within the service methods themselves.  Each function has a clear, single responsibility. However, error handling and input validation are absent, which could increase complexity if added. The code is straightforward and simple.  It consists of basic data retrieval operations with minimal logic.  There is no error handling or complex branching, resulting in low complexity. The code is very simple. It primarily consists of interface declarations that extend Spring Data JPA's JpaRepository, which handles most of the complex database interaction logic.  The custom methods added are straightforward. The code is relatively straightforward.  The complexity stems primarily from the incomplete custom query in `RentalRepository`, which is syntactically incorrect and could be more complex if completed correctly. Otherwise, the other functions are simple CRUD operations provided by Spring Data JPA. The code is relatively simple. It consists of a few straightforward repository methods using native queries.  The complexity is slightly increased by the use of native queries instead of JPQL, which can be harder to maintain and less portable. The incompleteness of one function declaration also adds a minor complexity. The code is relatively simple and straightforward. Each function performs a single, well-defined task of retrieving customer data. The use of Spring Data JPA simplifies the implementation and reduces complexity. The complexity score is low because of the clear separation of concerns and direct mapping between function names and database operations. There's no complex logic within the functions themselves. The code is relatively simple. It primarily consists of an interface extending `JpaRepository` and a single custom native query. The incomplete `getCustomerCount` function adds a minor complexity factor. The native query itself is straightforward, although more complex queries could increase complexity significantly. The code is relatively straightforward.  The complexity stems primarily from the native SQL queries which could become more complex if the database schema changes or more intricate queries are added. The use of Spring Data JPA simplifies much of the data access logic. The functions themselves are simple and well-defined. The code is relatively simple.  It uses a standard Spring Data JPA interface with a single custom query. The query itself is straightforward, although more complex queries could significantly increase complexity. The incompleteness of the second method reduces the overall complexity score. The code is relatively simple and straightforward.  It uses standard Spring Data JPA annotations for defining queries. The complexity is low because each function performs a single, well-defined database operation. The incompleteness of the provided code also contributes to the low complexity score. The code snippet is relatively simple. The repository interface contains only one function with straightforward logic. The test class setup is not fully shown, making complexity assessment incomplete, but the visible part is basic.  A low score is justified by the limited scope of the provided code. The code primarily consists of variable declarations for mocked repositories and a single annotated field for the ActorService class.  There is no function body provided, only setup for a test suite.  Therefore, the complexity is low.  Once test methods are added, the complexity will likely increase. The code is relatively simple.  It primarily involves setup using Mockito annotations and a single, straightforward test case.  There is minimal logic within the test itself. The complexity would increase significantly with more sophisticated test cases or more complex interactions between the mocked objects. The code consists of simple unit tests with minimal logic. Each test instantiates a controller, calls a single method, and asserts the result against a hardcoded expected value. There's no complex logic or branching within the tests themselves. The code is very simple and straightforward.  Each test follows a similar pattern: initialization, method call, and assertion. There's no significant logic or branching within the tests, making them easy to understand and maintain. The code consists of simple JUnit test cases with minimal logic.  The tests are straightforward and easy to understand. The incompleteness of `testInventory` lowers the complexity slightly. There is no significant use of complex data structures or algorithms. The code's complexity is relatively low. The individual functions are short and have a clear purpose, primarily focused on testing. The use of mocking keeps the tests isolated but the incompleteness of `testRental()` affects the overall score. There is no complex logic or nested structures present. The code is relatively simple. It primarily involves object creation, setter and getter method calls, and simple assertions.  There's no significant algorithmic complexity or intricate logic. The mocking aspect adds a bit of complexity, but it is still straightforward in this context. The code is relatively simple and straightforward. Each test function follows a clear pattern of setup, execution, and assertion. The logic within each test is basic and easily understandable.  However, lack of complete code and unclear variable naming makes complexity evaluation somewhat limited. The code is very simple and consists of only three straightforward unit tests. Each test follows a similar pattern, making the code highly readable and easy to understand. There is no significant logic or intricate structures. The code is very simple and consists of only a few lines of code in a single test. There is no complex logic or branching involved; it performs a straightforward instantiation, function call, and assertion.  The complexity is mainly due to the existence of two functions, but both functions are simple and standard."
+    }
+}
